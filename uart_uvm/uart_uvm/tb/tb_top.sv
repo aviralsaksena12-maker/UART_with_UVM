@@ -35,7 +35,6 @@ module tb_top;
 
   assign intf.rx_in = intf.tx_out;  // Loopback: TX -> RX
 
-  // Reset sequence - FIXED: Proper active-low reset
   initial begin
     intf.rst_n    = 1'b0;   // Assert reset
     intf.tx_start = 1'b0;
