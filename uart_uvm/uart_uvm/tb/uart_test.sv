@@ -21,7 +21,7 @@ class uart_test extends uvm_test;
       seq.num_txns = 10;
       seq.start(env.agent.sqr);
       
-      // FIXED: Wait for all transactions to complete instead of fixed delay
+     
       // Each byte: 1 start + 8 data + 1 stop = 10 bits
       // At 5209 cycles/bit with 10ns clock = ~520.9 us per byte
       // 10 bytes = ~5.2ms. Wait with timeout margin.
